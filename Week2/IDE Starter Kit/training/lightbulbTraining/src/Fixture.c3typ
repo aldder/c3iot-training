@@ -1,0 +1,7 @@
+/**
+* Fixture.c3typ
+* A single fixture in which a single {@link SmartBulb} may be connected. */
+entity type Fixture mixes MetricEvaluatable schema name "FXTR" {
+	// The {@link Apartment} in which this fixture is located.
+	apartment: Apartment 
+}

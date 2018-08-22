@@ -1,0 +1,10 @@
+/**
+ * SmartBulbToFixtureRelation.c3typ
+ * Describes a timed relationship between a smart bulb and a fixture. * For more information, see {@link TimedIntervalRelation}.
+ */
+
+@db(index=['to', 'from'])
+
+entity type SmartBulbToFixtureRelation mixes TimedIntervalRelation<SmartBulb, Fixture> schema name "SMRT_BLB_FXTR_RLTN" {
+	
+}

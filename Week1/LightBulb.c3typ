@@ -1,0 +1,7 @@
+type LightBulb {
+	serialNumber: string
+	technology: string enum ('LED','Halogen','Incandescend','Fluorescent')
+	wattage: int
+
+	lumens: function(technology: !string, wattage: !int) : int
+}

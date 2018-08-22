@@ -1,0 +1,8 @@
+type CanonicalSmartBuld mixes Canonical<CanonicalSmartBuld> {
+	tecnology: string
+	serialNumber: string
+	electricityConsumption: double
+	wattage: int
+	state: boolean
+	timestamp: DateTime
+}

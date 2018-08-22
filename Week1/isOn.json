@@ -1,0 +1,6 @@
+{
+	id: 'IsOn_SmartBulb',
+	name: 'IsOn',
+	srcType: 'SmartBulbData',
+	expression: 'or(or(state))'
+}

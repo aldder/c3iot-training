@@ -1,0 +1,6 @@
+{
+	id: 'ElectricityConsumption_SmartBulb',
+	name: 'ElecricityConsumption',
+	srcType: 'SmartBulbData',
+	expression: 'sum(sum(ElecricityConsumption))'
+}

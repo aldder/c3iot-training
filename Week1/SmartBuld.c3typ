@@ -1,0 +1,4 @@
+type SmartBulb extends LightBulb {
+	electricityConsumption: double
+	state: boolean
+}

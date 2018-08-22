@@ -1,0 +1,6 @@
+entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMR_BLB" {
+	lattitude: double
+	apartment: apartment
+	bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb)
+	currentPrediction: SmartBulbPrediction stored calc "bulbPredictions[0]"
+}

@@ -1,0 +1,5 @@
+type TransformCanonicalSmartBulbToSmartBulb mixes LightBulb transforms CanonicalSmartBulb {
+	id: ~ expression "serialNumber"
+	technology: ~ expression "technology"
+	wattage: ~ expression "wattage"
+}

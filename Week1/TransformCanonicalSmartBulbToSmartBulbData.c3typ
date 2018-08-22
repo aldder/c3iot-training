@@ -1,0 +1,6 @@
+type TransformCanonicalSmartBulbToData mixes SmartBulbData transforms CanonicalSmartBulb {
+	parent: ~ expression "{'id': serialNumber}"
+	timestamp: ~ expression "timestamp"
+	state: ~ expression "state == 'true' ? 'true':'false'"
+	electricityConsumption: ~ expression "{'value': electricityConsumption, 'unit':{'id':'kilowatt_hour'}}"
+}

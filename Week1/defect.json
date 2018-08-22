@@ -1,0 +1,6 @@
+{
+	id: 'Defect',
+	name: 'Defect',
+	description: "A defect is detected when the bulb is on but there is no power consumption",
+	expression: IsOn & (ElectricityConsumption == 0)
+}

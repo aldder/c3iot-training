@@ -1,0 +1,8 @@
+/**
+ * Building.c3typ
+ * A single building containing many {@link Apartment}s. */
+ 
+entity type Building mixes MetricEvaluatable schema name "BLDNG" {
+	// NEW FIELD: The apartments that are inside this building.
+	apartments: [Apartment](building)
+}
