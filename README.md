@@ -1,5 +1,5 @@
 # C3 IoT Training Course
-
+### SmartBulb Predictive Maintenance
 - Week 1
 - Week 2
 - Week 3
