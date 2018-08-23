@@ -24,4 +24,4 @@ curl -v -H "Content-Type: text/csv" -X PUT --data-binary @Data/SmartBulbFixture.
 
 *** SmartBulbMeasurement.csv.gz
 
-curl -v -H "Content-Type: text/csv, Content-Encoding: gzip" -X PUT --data-binary @Data/SmartBulbMeasurement.csv.gz https://lightbulb-dev5.c3-e.com/import/1/lightbulb/dev5/CanonicalSmartBulbMeasurement/SmartBulbMeasurement.csv.gz -u 'your username' -p
+curl -v -H "Content-Type: text/csv" -H "Content-Encoding: gzip" -X PUT --data-binary @Data/SmartBulbMeasurement.csv.gz https://lightbulb-dev5.c3-e.com/import/1/lightbulb/dev5/CanonicalSmartBulbMeasurement/SmartBulbMeasurement.csv.gz -u 'your username' -p
