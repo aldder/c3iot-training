@@ -1,0 +1,27 @@
+*** Fixture.csv
+
+curl -v -H "Content-Type: text/csv" -X PUT --data-binary @Data/Fixture.csv https://lightbulb-dev5.c3-e.com/import/1/lightbulb/dev5/CanonicalFixture/Fixture.csv -u 'your username' -p
+
+
+
+*** PowerGridStatus.csv
+
+curl -v -H "Content-Type: text/csv" -X PUT --data-binary @Data/PowerGridStatus.csv https://lightbulb-dev5.c3-e.com/import/1/lightbulb/dev5/CanonicalPowerGridStatus/PowerGridStatus.csv -u 'your username' -p
+
+
+
+*** SmartBulb.csv
+
+curl -v -H "Content-Type: text/csv" -X PUT --data-binary @Data/SmartBulb.csv https://lightbulb-dev5.c3-e.com/import/1/lightbulb/dev5/CanonicalSmartBulb/SmartBulb.csv -u 'your username' -p
+
+
+
+*** SmartBulbFixture.csv
+
+curl -v -H "Content-Type: text/csv" -X PUT --data-binary @Data/SmartBulbFixture.csv https://lightbulb-dev5.c3-e.com/import/1/lightbulb/dev5/CanonicalBulbToFixture/SmartBulbFixture.csv -u 'your username' -p
+
+
+
+*** SmartBulbMeasurement.csv.gz
+
+curl -v -H "Content-Type: text/csv, Content-Encoding: gzip" -X PUT --data-binary @Data/SmartBulbMeasurement.csv.gz https://lightbulb-dev5.c3-e.com/import/1/lightbulb/dev5/CanonicalSmartBulbMeasurement/SmartBulbMeasurement.csv.gz -u 'your username' -p

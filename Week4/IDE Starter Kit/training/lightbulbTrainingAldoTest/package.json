@@ -1,0 +1,6 @@
+{
+  "name": "lightbulbTrainingAldoTest",
+  "description": "Application Training",
+  "author": "C3 IoT",
+  "dependencies": ["standardDependencies", "machineLearning"]
+}

@@ -1,0 +1,19 @@
+/**
+ * This type encapsulates the data flow from the {@link CanonicalSmartBulbMeasurement} to the {@link SmartBulbMeasurement} type.
+ */
+ 
+type TransformCanonicalSmartBulbMeasurementToSmartBulbMeasurement mixes SmartBulbMeasurement transforms CanonicalSmartBulbMeasurement {
+	/**
+	* Use the serial number field ("SN") of the canonical to create a
+	properly-formatted pointer to the parent {@link SmartBulbMeasurementSeries}
+	object.
+	*/
+	parent: ~ expression { id: "concat('SBMS_serialNo_',SN)" }
+	lumens: ~ expression "Lumens"
+	power: ~ expression "Watts"
+	voltage: ~ expression "Voltage"
+	temperature: ~ expression "Temp"
+	start: ~ expression "TS"
+	end: ~ expression "TS + period(1, 'HOUR')"
+	status: ~ expression "Status"
+}

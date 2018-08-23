@@ -1,0 +1,13 @@
+/**
+ * This type represents the raw data that will represent {@link SmartBulbMeasurement} information. 
+ */
+
+type CanonicalSmartBulbMeasurement mixes Canonical<CanonicalSmartBulbMeasurement> {
+	TS: datetime
+	SN: string
+	Status: integer
+	Watts: double
+	Lumens: double
+	Voltage: double
+	Temp: double 
+}

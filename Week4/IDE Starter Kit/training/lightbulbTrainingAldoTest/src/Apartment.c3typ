@@ -1,0 +1,10 @@
+/**
+ * Apartment.c3typ
+ * A single apartment unit in a {@link Building}. */
+ 
+entity type Apartment mixes MetricEvaluatable schema name "APRTMNT" {
+	// The {@link Building} in which this apartment is located.
+	building: Building
+	// NEW FIELD: An array of fixtures that exist in this apartment.
+	fixtures: [Fixture](apartment) 
+}

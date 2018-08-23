@@ -1,0 +1,31 @@
+/**
+ * SmartBulb.c3typ
+ * A bulb capable of storing power consumption, light output, location, and more. 
+ */
+
+// NEW DB ANNOTATION: Include this on the line above the type declaration.
+@db(order='descending(start), descending(end)')
+
+entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_BLB" {
+	// The latitude of this bulb.
+	latitude: double
+	// The longitude of this bulb.
+	longitude: double
+	// The unit of measurement used for this bulb's light output measurements.
+	lumensUOM: Unit
+	// The unit of measurement used for this bulb's power consumption measurements.
+	powerUOM: Unit
+	// The unit of measurement used for this bulb's temperature measurements.
+	temperatureUOM: Unit
+	// The unit of measurement used for this bulb's voltage measurements.
+	voltageUOM: Unit
+	// NEW FIELD: This bulb's historical events.
+	bulbEvents: [SmartBulbEvent](smartBulb)
+
+	// NEW FIELD: The collection of relations that pertain to this smart bulb.
+	fixtureHistory: [SmartBulbToFixtureRelation](from)
+	// NEW FIELD: The current {@link Fixture} to which this smart bulb is attached.
+	currentFixture: Fixture stored calc 'fixtureHistory[0].(end == null).to'
+	// This bulb's historical measurements.
+	bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb)
+}
