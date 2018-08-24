@@ -1,0 +1,17 @@
+/**
+ * Building.c3typ
+ * A single building containing many {@link Apartment}s. 
+ */
+ 
+// NEW DB ANNOTATION: Include this on the line above the type declaration.
+@db(order='descending(timestamp)')
+
+entity type Building mixes MetricEvaluatable schema name "BLDNG" {
+	// NEW FIELD: The apartments that are inside this building.
+	apartments: [Apartment](building)
+
+	// NEW FIELD: The collection of statuses relevant to this {@link Building}.
+	gridStatusSet: [PowerGridStatusSet](parent)
+	// NEW FIELD: The current status of the power grid for this {@link Building}.
+	@db(timedValueHistoryField='gridStatusSet') gridStatus: PowerGridStatus
+}

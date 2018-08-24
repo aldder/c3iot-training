@@ -1,0 +1,10 @@
+/*
+ * A series of measurements taken from a single {@link SmartBulb}. 
+ */
+
+entity type SmartBulbMeasurementSeries mixes TimeseriesHeader<SmartBulbMeasurement> schema name "SMRT_BLB_MSRMNT_SRS" {
+	// The {@link SmartBulb} for which measurements were taken.
+	smartBulb: SmartBulb
+	// The aggregation/disaggregation {@link Treatment} to use for the measurements.
+	treatment: string enum('previous', 'rate', 'integral') 
+}

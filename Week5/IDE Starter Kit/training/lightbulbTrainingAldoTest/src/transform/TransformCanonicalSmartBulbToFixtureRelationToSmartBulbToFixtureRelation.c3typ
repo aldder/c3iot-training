@@ -1,0 +1,11 @@
+/**
+ * This type encapsulates the data flow from the {@link CanonicalSmartBulbToFixtureRelation} to the {@link SmartBulbToFixtureRelation} type.
+ */
+
+type TransformCanonicalSmartBulbToFixtureRelationToSmartBulbToFixtureRelation mixes SmartBulbToFixtureRelation transforms CanonicalSmartBulbToFixtureRelation {
+	id: ~ expression "concat(SN,'_',fixture)"
+	to: ~ expression { id: "fixture" }
+	from: ~ expression { id: "SN" }
+	end: ~ expression "end"
+	start: ~ expression "start"
+}

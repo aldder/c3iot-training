@@ -1,0 +1,10 @@
+{
+"id": "CanonicalPowerGridStatus", 
+"name": "CanonicalPowerGridStatus", 
+"source": {
+	"typeName": "CanonicalPowerGridStatus" 
+	},
+"sourceSystem": { 
+	"id": "Legacy"
+	} 
+}

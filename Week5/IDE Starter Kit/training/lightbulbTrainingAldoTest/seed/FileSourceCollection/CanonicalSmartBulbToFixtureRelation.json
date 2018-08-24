@@ -1,0 +1,10 @@
+{
+"id": "CanonicalSmartBulbToFixtureRelation", 
+"name": "CanonicalSmartBulbToFixtureRelation", 
+"source": {
+	"typeName": "CanonicalSmartBulbToFixtureRelation" 
+	},
+"sourceSystem": { 
+	"id": "Legacy"
+	} 
+}
