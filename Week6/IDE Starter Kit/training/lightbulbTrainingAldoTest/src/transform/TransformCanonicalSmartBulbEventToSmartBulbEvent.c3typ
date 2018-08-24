@@ -1,0 +1,12 @@
+/**
+ * This type encapsulates the data flow from the {@link CanonicalSmartBulbEvent} to the {@link SmartBulbEvent} type.
+ */
+ 
+type TransformCanonicalSmartBulbEventToSmartBulbEvent mixes SmartBulbEvent transforms CanonicalSmartBulbEvent {
+	id: ~ expression "id"
+	end: ~ expression "end"
+	start: ~ expression "start"
+	eventCode: ~ expression "eventCode"
+	eventType: ~ expression "eventType"
+	smartBulb: ~ expression { id: "bulb" }
+}

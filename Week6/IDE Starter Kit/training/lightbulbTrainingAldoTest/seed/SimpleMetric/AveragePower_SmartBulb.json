@@ -1,0 +1,8 @@
+{
+	"id": "AveragePower_SmartBulb",
+	"name": "AveragePower",
+	"description": "Average power over time of the SmartBulb",
+	"path": "bulbMeasurements",
+	"expression": "avg(avg(normalized.data.power))",
+	"srcType": "SmartBulb"
+}

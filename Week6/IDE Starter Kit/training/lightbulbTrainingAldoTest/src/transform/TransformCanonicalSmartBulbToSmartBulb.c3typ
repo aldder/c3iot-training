@@ -1,0 +1,17 @@
+/**
+ * This type encapsulates the data flow from the {@link CanonicalSmartBulb} to the {@link SmartBulb} type. 
+ */
+ 
+type TransformCanonicalSmartBulbToSmartBulb mixes SmartBulb transforms CanonicalSmartBulb {
+	id: ~ expression "SN"
+	manufacturer: ~ expression {id: "Manufacturer"}
+	bulbType: ~ expression "BulbType"
+	wattage: ~ expression "Wattage"
+	startDate: ~ expression "StartDate"
+	latitude: ~ expression "Latitude"
+	longitude: ~ expression "Longitude"
+	lumensUOM: ~ expression "{ \"id\": \"'lumen'\" }"
+	powerUOM: ~ expression "{ \"id\": \"'watt'\" }"
+	temperatureUOM: ~ expression "{ \"id\": \"'degrees_fahrenheit'\" }"
+	voltageUOM: ~ expression "{ \"id\": \"'volt'\" }"
+}

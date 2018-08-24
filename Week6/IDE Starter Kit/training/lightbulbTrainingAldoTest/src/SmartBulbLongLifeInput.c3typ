@@ -1,0 +1,4 @@
+@DFE(period='Hour', interval='Hour')
+type SmartBulbLongLifeInput mixes CompoundDataFlowEvent<SmartBulb> {
+    bulbLife: SmartBulbLongLife
+}

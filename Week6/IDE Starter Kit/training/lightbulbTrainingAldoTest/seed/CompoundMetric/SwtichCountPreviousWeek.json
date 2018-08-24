@@ -1,0 +1,6 @@
+{
+	"name": "SwitchCountPreviousWeek",
+	"id": "SwitchCountPreviousWeek",
+	"description": "The total number of times a smart bulb is switched on or off up in the previous week of the interval",
+	"expression": "window('SUM', SwitchCount, -7, 7)"
+}

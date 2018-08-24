@@ -1,0 +1,7 @@
+/**
+ * This type encapsulates the data flow from the {@link CanonicalSmartBulb} to the {@link Manufacturer} type.
+ */
+
+type TransformCanonicalSmartBulbToManufacturer mixes Manufacturer transforms CanonicalSmartBulb {
+	id: ~ expression "Manufacturer"
+}
