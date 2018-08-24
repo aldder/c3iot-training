@@ -1,0 +1,27 @@
+/**
+ * A single measurement taken from a single {@link SmartBulb}. 
+ */
+@db(datastore='cassandra', 
+	partitionKeyField='parent', 
+	persistenceOrder='start', 
+	persistDuplicates=false, 
+	compactType=true, 
+	shortIdReservationRange=100000)
+
+entity type SmartBulbMeasurement mixes TimeseriesDataPoint<SmartBulbMeasurementSeries> schema name 'SMRT_BLB_MSRMNT' {
+	// The measured number of lumens.
+	@ts(treatment='rate') 
+	lumens: double
+	// The measured power consumption.
+	@ts(treatment='rate') 
+	power: double
+	// The measured temperature.
+	@ts(treatment='rate') 
+	temperature: double
+	// The measured voltage.
+	@ts(treatment='rate') 
+	voltage: double
+	// The status of the smart bulb (on or off).
+	@ts(treatment='previous') 
+	status: int
+}

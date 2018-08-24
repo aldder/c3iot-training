@@ -1,0 +1,4 @@
+@DFE(period='Hour', interval='Hour')
+type SmartBulbFailureInput mixes CompoundDataFlowEvent<SmartBulb> {
+    hasFailed: SmartBulbFailure
+}

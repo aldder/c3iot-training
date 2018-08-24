@@ -1,0 +1,10 @@
+{
+"id": "CanonicalFixture", 
+"name": "CanonicalFixture", 
+"source": {
+	"typeName": "CanonicalFixture" 
+	},
+"sourceSystem": { 
+	"id": "Legacy"
+	} 
+}

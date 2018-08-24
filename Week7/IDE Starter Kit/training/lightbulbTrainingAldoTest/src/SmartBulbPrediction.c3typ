@@ -1,0 +1,25 @@
+/**
+ * A prediction made for a single {@link SmartBulb}.
+ */
+@db(compactType=true,
+    datastore='cassandra',
+    partitionKeyField='smartBulb',
+    persistenceOrder='timestamp',
+    persistDuplicates=false,
+    shortId=true,
+    shortIdReservationRange=100000)
+
+entity type SmartBulbPrediction schema name "SMRT_BLB_PRDCTN" {
+    /**
+    * The calculated risk score for this SmartBulb
+    */
+    prediction: double
+    /**
+     * The {@link SmartBulb} for which this prediction was made.
+     */
+    smartBulb: SmartBulb
+    /**
+     * The time at which this prediction was made.
+     */
+    timestamp: datetime
+}

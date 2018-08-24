@@ -1,0 +1,10 @@
+/**
+ * This type represents the raw data that will represent {@link SmartBulbToFixtureRelation} information. 
+ */
+
+type CanonicalSmartBulbToFixtureRelation mixes Canonical<CanonicalSmartBulbToFixtureRelation> {
+	SN: string
+	fixture: string
+	start: datetime
+	end: datetime 
+}
