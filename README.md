@@ -10,4 +10,4 @@
 - [ ] Week 8: C3 UI Framework
 - [ ] Week 9: Security & Access Control, Environment Monitoring and RESTful APIs
 
-![data model](https://raw.githubusercontent.com/aldder/c3iot-training/master/Week5/datamodel.png)
+![data model](https://raw.githubusercontent.com/aldder/c3iot-training/master/Week7/datamodel.png)
