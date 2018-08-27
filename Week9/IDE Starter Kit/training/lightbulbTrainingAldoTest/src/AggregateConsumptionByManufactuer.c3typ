@@ -1,0 +1,17 @@
+/**
+* A single aggregate power measurement for a manufacturer
+*/
+@db(compactType=true,
+    datastore='cassandra',
+    partitionKeyField='parent',
+    persistenceOrder='start',
+    persistDuplicates=false,
+    shortId=true,
+    shortIdReservationRange=100000)
+
+entity type AggregateConsumptionByManufacturer schema name "AGG_CNS_MNFCT" {
+    parent: Manufacturer
+    start: datetime
+    end: datetime
+    aggregateConsumption: double
+}

@@ -1,0 +1,16 @@
+/**
+ * Map reduce job that returns the aggregate power consumption per manufacturer
+ */
+ 
+entity type AggregateConsumptionByManufacturerJob extends MapReduce<SmartBulb, string, double, double> type key 'AGG_CNS_MNFCT' {
+    // Start of the evaluation interval
+    startDate: datetime
+    // End of the evaluation interval
+    endDate: datetime
+    // Metric evaluation interval
+    interval: string
+    // Map function
+    map: ~ js server
+    // Reduce function
+    reduce: ~ js server
+}

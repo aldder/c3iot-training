@@ -1,0 +1,7 @@
+{
+    "id" : "RiskScore_SmartBulb",
+    "name" : "RiskScore",
+    "description": "Percentage value indicating risk of SmartBulb failure", 
+    "srcType" : "SmartBulb",
+    "expression" : "identity(currentPrediction.prediction/365)"
+}

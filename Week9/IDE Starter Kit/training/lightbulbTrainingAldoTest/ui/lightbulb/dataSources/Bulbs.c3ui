@@ -1,0 +1,25 @@
+ui module lightbulb {
+    dataSource Bulbs {
+        "collection":true,
+        "c3function":"fetch",
+        "c3arguments":{
+            "spec":{
+                "limit":"-1",
+                "include":"currentPrediction.prediction, manufacturer, bulbType, startDate, bulbStatus, latitude, longitude"
+            }
+        },
+        "c3type":"SmartBulb",
+        "name":"Bulbs",
+        "responseSelector":"objs",
+        "record":false,
+        "responseTransform":{
+            "combine":false,
+            "rootProperty":false,
+            "firstItem":false,
+            "order":false,
+            "tuples":false,
+            "fields":false
+        },
+        "id":"lightbulb.Bulbs"
+    }
+}

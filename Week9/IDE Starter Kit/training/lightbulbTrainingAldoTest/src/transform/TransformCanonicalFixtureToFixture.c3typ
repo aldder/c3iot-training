@@ -1,0 +1,8 @@
+/**
+ * This type encapsulates the data flow from the {@link CanonicalFixture} to the {@link Apartment} type.
+ */
+ 
+type TransformCanonicalFixtureToFixture mixes Fixture transforms CanonicalFixture {
+	id: ~ expression "fixture"
+	apartment: ~ expression { id: "apartment" }
+}

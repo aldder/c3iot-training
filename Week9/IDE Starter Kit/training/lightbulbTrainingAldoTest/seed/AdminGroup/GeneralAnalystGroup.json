@@ -1,0 +1,12 @@
+{
+    "id" : "GeneralAnalystGroup", 
+    "name" : "GeneralAnalystGroup", 
+    "roles" : [
+        {
+            "id": "GeneralAnalystRole"
+        },
+        {
+            "id": "ExportDataPullRole"
+        }
+    ]
+}

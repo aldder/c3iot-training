@@ -1,0 +1,13 @@
+{
+    "id": "ExportDataPullRole", 
+    "name": "ExportDataPullRole", 
+    "permissions": [
+        "deny:Export::remove", 
+        "deny:Export::removeAll", 
+        "allow:Export::*", 
+        "allow:BatchExportSpec::make", 
+        "allow:OAuth::token", 
+        "allow:S3File::*", 
+        "allow:File::writeEncodedStream"
+    ]
+}

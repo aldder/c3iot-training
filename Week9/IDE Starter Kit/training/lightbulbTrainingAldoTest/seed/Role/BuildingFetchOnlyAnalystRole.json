@@ -1,0 +1,7 @@
+{
+    "id": "BuildingFetchOnlyAnalystRole", 
+    "name": "BuildingFetchOnlyAnalystRole", 
+    "permissions": [
+        "allow:Building::fetch"
+    ]
+}

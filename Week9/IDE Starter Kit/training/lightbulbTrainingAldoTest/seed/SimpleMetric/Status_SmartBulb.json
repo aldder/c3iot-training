@@ -1,0 +1,8 @@
+{
+	"id": "Status_SmartBulb",
+	"name": "Status",
+	"description": "Status over time of the SmartBulb",
+	"path": "bulbMeasurements",
+	"expression": "sum(sum(normalized.data.status))",
+	"srcType": "SmartBulb"
+}

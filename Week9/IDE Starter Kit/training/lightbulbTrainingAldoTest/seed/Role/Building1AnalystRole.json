@@ -1,0 +1,16 @@
+{
+    "id": "Building1AnalystRole", 
+    "name": "Building1AnalystRole", 
+    "permissions": [
+        "allow:*:read:",
+        "deny:SmartBulbMeasurement::fetch"
+    ],
+    "actionConditions": [ 
+        "Building:read::(intersects(id,['bld1']))", 
+        "Apartment:read::(intersects(building.id, ['bld1']))", 
+        "Fixture:read::(intersects(apartment.building.id,['bld1']))",
+        "SmartBulbToFixtureRelation:read::(intersects(to.apartment.building.id,['bld1 ']))",
+        "SmartBulb:read::(intersects(fixtureHistory.to.apartment.building.id,['bld1'] ))",
+        "SmartBulbMeasurementSeries:read::(intersects(smartBulb.fixtureHistory.to.apartment.building.id,['bld1']))"
+    ]
+}

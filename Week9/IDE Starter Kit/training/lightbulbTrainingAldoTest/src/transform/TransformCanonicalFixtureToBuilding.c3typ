@@ -1,0 +1,7 @@
+/**
+ * This type encapsulates the data flow from the {@link CanonicalFixture} to the {@link Apartment} type.
+ */
+ 
+type TransformCanonicalFixtureToBuilding mixes Building transforms CanonicalFixture {
+	id: ~ expression "building"
+}

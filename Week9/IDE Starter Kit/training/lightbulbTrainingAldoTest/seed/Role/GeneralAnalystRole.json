@@ -1,0 +1,7 @@
+{
+    "id": "GeneralAnalystRole", 
+    "name": "GeneralAnalystRole", 
+    "permissions": [
+        "allow:*:read:"
+    ]
+}

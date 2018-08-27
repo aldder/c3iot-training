@@ -1,0 +1,12 @@
+{
+    "id" : "BuildingFetchOnlyGroup",
+    "name" : "BuildingFetchOnlyGroup",
+    "roles" : [
+        {
+            "id": "BuildingFetchOnlyAnalystRole"
+        },
+        {
+            "id": "ExportDataPullRole"
+        }
+    ]
+}

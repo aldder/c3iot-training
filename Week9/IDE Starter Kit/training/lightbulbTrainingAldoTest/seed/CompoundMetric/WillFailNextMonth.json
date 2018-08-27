@@ -1,0 +1,6 @@
+{
+	"name": "WillFailNextMonth",
+	"id": "WillFailNextMonth",
+	"description" : "Indicator (1 or 0) if the smart bulb died within the next 30 days",
+	"expression": "window('MAX', IsDefective, 0, 30) > 0"
+}

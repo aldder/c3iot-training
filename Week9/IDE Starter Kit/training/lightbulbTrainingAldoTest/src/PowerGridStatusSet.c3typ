@@ -1,0 +1,13 @@
+/**
+* PowerGridStatusSet.c3typ
+* The status of the power grid for a {@link Building} at a specific time. 
+*/
+
+@db(datastore='cassandra', 
+	partitionKeyField='parent', 
+	persistenceOrder='timestamp', 
+	persistDuplicates=false, 
+	compactType=true, shortId=true, 
+	shortIdReservationRange=100000)
+
+entity type PowerGridStatusSet mixes TimedValueHistory<Building>, Integer schema name 'PWR_GRD_STTS_ST'

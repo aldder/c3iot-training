@@ -1,0 +1,12 @@
+{
+    "id" : "Building1AnalystGroup",
+    "name" : "Building1AnalystGroup",
+    "roles" : [
+        {
+            "id": "Building1AnalystRole"
+        },
+        {
+            "id": "ExportDataPullRole"
+        }
+    ]
+}
