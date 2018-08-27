@@ -8,6 +8,6 @@
 - [x] Week 6: Advanced Analytics
 - [x] Week 7: Machine Learning on the C3 IoT Platform
 - [x] Week 8: C3 UI Framework
-- [ ] Week 9: Security & Access Control, Environment Monitoring and RESTful APIs
+- [x] Week 9: Security & Access Control, Environment Monitoring and RESTful APIs
 
 ![data model](https://raw.githubusercontent.com/aldder/c3iot-training/master/Week7/datamodel.png)
