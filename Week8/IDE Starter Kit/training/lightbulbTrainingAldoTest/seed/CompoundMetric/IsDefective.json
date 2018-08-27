@@ -1,0 +1,6 @@
+{
+	"name": "IsDefective",
+	"id": "IsDefective",
+	"description": "Indicator (1 or 0) if the smart bulb died",
+	"expression": "sum(eval('HOUR', AverageLumens == 0 && Status == 1)) ? 1 : 0"
+}

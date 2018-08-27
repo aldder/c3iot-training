@@ -1,0 +1,9 @@
+/**
+ * This type represents the raw data that will represent {@link PowerGridStatus} information. 
+ */
+ 
+type CanonicalPowerGridStatus mixes Canonical<CanonicalPowerGridStatus> {
+	TS: datetime
+	Building: string
+	Status: int 
+}

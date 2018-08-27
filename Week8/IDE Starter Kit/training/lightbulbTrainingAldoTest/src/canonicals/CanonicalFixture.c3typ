@@ -1,0 +1,9 @@
+/**
+ * This type represents the raw data that will represent {@link Fixture} information. 
+ */
+
+type CanonicalFixture mixes Canonical<CanonicalFixture> {
+	fixture: string
+	apartment: string
+	building: string 
+}

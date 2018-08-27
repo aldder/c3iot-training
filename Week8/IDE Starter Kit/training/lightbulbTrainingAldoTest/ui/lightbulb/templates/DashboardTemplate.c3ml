@@ -1,0 +1,16 @@
+{{div.container-fluid.c3-page.c3-page-dashboard({cls: cls}) do }} 
+    <div class="row">
+        <div class="c3-component-socket col-xs-12 col-sm-3" id="LeftCol"></div> 
+        <div class="col-xs-12 col-sm-9" id="RightCol">
+            <div class="row">
+                <div class="c3-component-socket col-xs-12" id="RightColRow1"></div>
+            </div>
+        <div class="row">
+            <div class="c3-component-socket col-xs-12" id="RightColRow2"></div>
+        </div>
+        <div class="row">
+            <div class="c3-component-socket col-xs-12" id="RightColRow3"></div>
+        </div>
+    </div>
+</div>
+{{ end }}

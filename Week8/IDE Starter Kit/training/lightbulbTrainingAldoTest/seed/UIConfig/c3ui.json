@@ -1,0 +1,32 @@
+{
+    "id": "uiconfig",
+    "applications": [
+        {
+            "id": "lightbulb"
+        }
+    ],
+    "environments": [
+        {
+            "id": "development",
+            "session": {
+                "cache": "LocalStorage"
+            },
+            "locales": [
+                {
+                    "id": "en",
+                    "name": "English"
+                }
+            ], 
+            "site": {
+                "renderLogo": false,
+                "hideNavigation": true
+            },
+            "connection": {
+                "cache": false
+            },
+            "designer": true,
+            "c3Tools": true,
+            "acl": false
+        }
+    ] 
+}

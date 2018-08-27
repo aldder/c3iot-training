@@ -1,0 +1,16 @@
+/**
+ * SmartBulbEvent.c3typ
+ * An event that happens to a single {@link SmartBulb}. */
+
+entity type SmartBulbEvent schema name "SMRT_BLB_EVNT" {
+	// The time at which this event ended.
+	end: datetime
+	// The time at which this event began.
+	start: datetime
+	// The event code used to distinguish events.
+	eventCode: string
+	// The type of this event.
+	eventType: string
+	// The {@link SmartBulb} connected to this event.
+	smartBulb: SmartBulb 
+}

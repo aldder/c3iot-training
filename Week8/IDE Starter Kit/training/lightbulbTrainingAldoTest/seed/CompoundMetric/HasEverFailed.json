@@ -1,0 +1,6 @@
+{
+	"name": "HasEverFailed",
+	"id": "HasEverFailed",
+	"description": "Indicates (1 or 0) if the SmartBulb has failed during evaluated interval",
+	"expression": "rolling('SUM',IsDefective) ? 1 : 0"
+}

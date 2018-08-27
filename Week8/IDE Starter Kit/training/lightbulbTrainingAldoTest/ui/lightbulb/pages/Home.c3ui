@@ -1,0 +1,194 @@
+ui module lightbulb {
+    page Home {
+        "id":"lightbulb.Home",
+        "name":"Home", 
+        "template":"lightbulb.DashboardTemplate", 
+        "thumbnail":"template-thumbs/120/ui.Dashboard2x2.gif", 
+        "title":"Home",
+        "url":"home",
+        "components":[
+            {
+                "id": "HistogramChart",
+                "component": "chart.MetricsHistogram", 
+                "icon": "bar-chart",
+                "name": "HistogramChart",
+                "box": true,
+                "title": "Failure Risk", 
+                "numberPoints": "-1",
+                "numberBins": "10",
+                "renderTo": "#RightColRow1",
+                "height": 556,
+                "titleUrl": null,
+                "data": {
+                    "itemsDataSource": "lightbulb.Bulbs"
+                },
+                "metricNameTitle": true, 
+                "metricNameTooltip": true, 
+                "chartingType": "count", 
+                "binningType": "value", 
+                "labelDecimals": null, 
+                "worstPerformingLegendText": null, 
+                "period": null,
+                "start": null,
+                "pointPath": null,
+                "pointWidth": "25",
+                "nameField": null,
+                "countText": null,
+                "maxValueText": null,
+                "nameText": null,
+                "valueText": null, 
+                "percentileText": null, 
+                "drilldownBackText": null, 
+                "noHistogramDataMessageText": null, 
+                "noItemDataMessageText": null, 
+                "errorDataMessageText": null, 
+                "ignoreZeroValues": false, 
+                "displayXAxisLegend": false, 
+                "tooltipBeneathColumns": false, 
+                "currentMomentEval": false, 
+                "enableDrilldown": false, 
+                "histogramMetric": {
+                    "metricName": "RiskScore",
+                    "metricTitle": "RiskScore"
+                },
+                "colors": [
+                    "#4f6e04",
+                    "#31b82e",
+                    "#74f03a",
+                    "#f5df16",
+                    "#ecf029",
+                    "#f6f79c",
+                    "#ffa462",
+                    "#f27201",
+                    "#ff6d4d",
+                    "#e34400"
+                ]
+            },
+            {
+                "id": "Map",
+                "component": "Map",
+                "icon": "map-marker",
+                "name": "Map",
+                "box": true,
+                "title": "Status Map",
+                "autoLoadData": true,
+                "lat": "latitude",
+                "lng": "longitude",
+                "autocenter": true,
+                "cluster": false,
+                "mapConfig": {
+                    "mapTypeId": "roadmap"
+                },
+                "components": [
+                    {
+                        "component": "Tooltip",
+                        "id": "PhantomTooltip",
+                        "renderTo": ".phantom-tooltip"
+                    } 
+                ],
+                "renderTo": "#RightColRow2",
+                "height": 556,
+                "markerColors": [
+                    {        
+                        "id": "1",
+                        "color": "#fc3d00",
+                        "display": "if 'currentPrediction.prediction > 0.5' then color = #fc3d00",
+                        "field": "currentPrediction.prediction", "value": "0.5",
+                        "comparator": ">"
+                    }
+                ],
+                "useInfoWindowTpl": false,
+                "data": {
+                    "collection": "lightbulb.Bulbs"
+                },
+                "allowGeoFilter": false,
+                "showNumberOfRecords": false
+            },
+            {
+                "id": "Grid",
+                "component": "KendoGrid", 
+                "icon": "align-justify", 
+                "name": "Grid",
+                "box": true,
+                "paginate": true,
+                "title": "Lightbulb Details", 
+                "data": {
+                    "collection": "lightbulb.Bulbs"
+                },
+                "filterable": false,
+                "renderTo": "#RightColRow3",
+                "height": 556,
+                "titleUrl": null,
+                "aggregate": null,
+                "small": false,
+                "checkBoxes": false,
+                "columns": [
+                    {        
+                        "id": "id",
+                        "field": "id",
+                        "label": "Bulb ID" 
+                    },
+                    {    
+                        "id": "bulbType",
+                        "field": "bulbType",
+                        "label": "Bulb Type"
+                    },
+                    {
+                        "id": "manufacturer.id", 
+                        "field": "manufacturer.id", 
+                        "label": "Manufacturer"
+                    },
+                    {
+                        "id": "startDate",
+                        "field": "startDate",
+                        "label": "Start Date",
+                        "format": "time"
+                    }, 
+                    {
+                        "id": "currentPrediction.prediction", 
+                        "field": "currentPrediction.prediction", 
+                        "label": "Risk Score",
+                        "format": "humanize"
+                    }
+                ]
+            },
+            {
+                "id": "FilterPanel",
+                "component": "FilterPanel",
+                "icon": "lightbulb",
+                "name": "FilterPanel",
+                "box": false,
+                "title": "Filter",
+                "filterForm": {
+                    "component": "FilterForm",
+                    "filters": [
+                        {
+                            "id": "manufacturer.id",
+                            "field": "manufacturer.id",
+                            "label": "Manufacturer",
+                            "dataType": "string",
+                            "comparator": false,
+                            "component": "field.Text"
+                        },
+                        {
+                            "id": "bulbType",
+                            "field": "bulbType",
+                            "label": "Bulb type",
+                            "dataType": "string",
+                            "comparator": false,
+                            "component": "field.Text"
+                        }
+                    ],
+                    "id": "FilterForm"
+                },
+                "renderTo": "#LeftCol",
+                "height": 556,
+                "data": {
+                    "collection": "lightbulb.Bulbs"
+                },
+                "geoFilterText": "Geographical Filtering",
+                "allowGeoFilter": false
+            }
+        ]
+    }
+}
